@@ -24,7 +24,7 @@ function App() {
         <Route path="/capturados" element={<Original />} />
         <Route path="/favoritos" element={<Favoritos />} />
         <Route path="/:nombre" element={<Detalle />} />
-        
+        <Route path="/detalle/:name" element={<Detalle />} />
         </Routes>
    
     </Router>
