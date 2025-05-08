@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
+import { AppProvider } from './contexto/contexto';
 
 import Listar from './componentes/listar'
 import Original from './componentes/original'
@@ -14,7 +14,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <AppProvider>
     <Router>
       <Menu />
         <Routes>
@@ -28,8 +28,8 @@ function App() {
         </Routes>
    
     </Router>
-    </>
-  )
+    </AppProvider>
+  );
 }
 
 export default App
